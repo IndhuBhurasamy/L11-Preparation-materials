@@ -1,0 +1,6 @@
+Using Selenium, how can we click on an element at certain coordinates ?
+1) element.click(x, y);
+ 2) Selenium WebDriver does not support this functionality
+ 3) Using the Actions class' method moveToElement(element, xOffset, yOffset)
+
+Ans  3) Using the Actions class' method moveToElement(element, xOffset, yOffset)

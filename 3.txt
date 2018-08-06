@@ -1,0 +1,22 @@
+
+Selenium variables are stored in _____________.
+
+A. storedVars
+
+B. storedVariables
+
+C. VariablesStore
+
+D. None of the above
+Correct Answer : A. 
+
+
+During Which phases defect are injected?
+  Requirement Gathering
+  Errors in privious phase output
+
+when is the application ui design ?
+During high level design
+
+
+

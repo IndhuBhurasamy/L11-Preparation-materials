@@ -1,0 +1,240 @@
+27:36
+1)Select the command which is NOT a type of assertion in Selenium IDE.
+
+Assert
+
+Verify
+
+WaitFor
+
+Wait
+2)The Selenium
+
+Provides professional customer support
+
+Test Reports are generated automatically
+
+Comes with a built-in object repository
+
+Cannot access elements outside of the web application under test
+
+3)26:33
+Can Google chrome be supported by Selenium IDE?
+
+Yes
+
+No
+
+4)Can Unix operating system be supported by Selenium IDE?
+
+No
+
+Yes
+5)25:45
+Select the language which is supported by The Selenium Web Driver
+
+Perl
+
+Sql
+
+ASP
+
+Cobol
+
+6)The Actions commands
+
+are commands that directly interact with page elements.
+
+are commands that allow you to store values to a variable.
+
+are commands that verify if a certain condition is met.
+7)Select the command which is used to check the presence of a certain element.
+
+verifyTable
+
+verifyTitlePresent
+
+verifyTextPresent
+
+verifyElementPresent
+8)23:39
+Select the command which is used to compare the contents of a table with expected values.
+
+verifyTables
+
+verifyTableData
+
+verifyTable
+
+verifyTableCell
+
+ans VerifyTable
+
+9) Select the command which is used to pause execution until the specified element becomes present.
+
+waitForElementPresent
+
+waitForPagePresent
+
+waitForTablePresent
+
+waitForFieldPresent
+
+Ans  waitForElementPresent
+
+10)Select the command that will NOT wait for a new page to load before moving onto the next command.
+
+clickAndWait
+
+selectAndType
+
+typeAndWait
+
+selectAndWait
+
+Ans  selectAndType
+
+11)21:26
+Select the command which is used to pause execution until the page is loaded completely.
+
+waitForPageToLoad
+
+waitForElementPresent
+
+waitForPage
+
+waitForLoad
+
+12 19:37
+Select the tab which gives feedback and other useful information when executing tests.
+
+Information
+
+Feedback
+
+Reference
+
+Element
+
+Ans Reference
+
+13  18:41
+What is TestNG?
+
+TestNextGeneration
+
+TestNewGenerlization
+
+TestNewGeneration
+
+TestNextGenerations
+
+Ans  TestNextGeneration
+
+14 17:29
+Select the tab that shows which command Selenium IDE is currently executing.
+
+Variable
+
+Data
+
+Information
+
+Info
+
+Ans Info
+
+15   Which method is used when you want to verify whether a certain check box, radio button, or option in a drop-down box is selected in Web driver Selenium
+
+is_Selected()
+
+isSelect()
+
+isSelected()
+
+is_Select()
+
+Ans  isSelected()
+
+16  12:46
+Select the method which clears all selected entries in Web driver Selenium.
+
+dselectAll()
+
+deselect_All()
+
+dselect_All()
+
+deselectAll()
+
+Ans deselectAll()
+
+17 Method which selects the option which displays the text matching the parameter passed to it
+
+selectVisibleText()
+
+selectByVisibleText()
+
+select_VisibleText()
+
+select_ByVisibleText()
+
+
+
+Reference  
+
+Mouse Event in Selenium Webdriver
+
+Handling Keyboard & Mouse Events
+Handling special keyboard and mouse events are done using the Advanced User Interactions API. It contains the Actions and the Action classes that are needed when executing these events. The following are the most commonly used keyboard and mouse events provided by the Actions class.
+
+Method	Description
+clickAndHold()	Clicks (without releasing) at the current mouse location.
+contextClick()	Performs a context-click at the current mouse location.
+doubleClick()	Performs a double-click at the current mouse location.
+dragAndDrop(source, target)	Performs click-and-hold at the location of the source element, moves to the location of the target element, then releases the mouse.
+
+Parameters:
+
+source- element to emulate button down at.
+
+target- element to move to and release the mouse at.
+dragAndDropBy(source, x-offset, y-offset)	Performs click-and-hold at the location of the source element, moves by a given offset, then releases the mouse.
+
+Parameters:
+
+source- element to emulate button down at.
+
+xOffset- horizontal move offset.
+
+yOffset- vertical move offset.
+keyDown(modifier_key)	Performs a modifier key press. Does not release the modifier key - subsequent interactions may assume it's kept pressed.
+
+Parameters:
+
+modifier_key - any of the modifier keys (Keys.ALT, Keys.SHIFT, or Keys.CONTROL)
+keyUp(modifier _key)	Performs a key release.
+
+Parameters:
+
+modifier_key - any of the modifier keys (Keys.ALT, Keys.SHIFT, or Keys.CONTROL)
+moveByOffset(x-offset, y-offset)	Moves the mouse from its current position (or 0,0) by the given offset.
+
+Parameters:
+
+x-offset- horizontal offset. A negative value means moving the mouse left.
+
+y-offset- vertical offset. A negative value means moving the mouse down.
+moveToElement(toElement)	Moves the mouse to the middle of the element. 
+
+Parameters:
+
+toElement- element to move to.
+release()	Releases the depressed left mouse button at the current mouse location
+sendKeys(onElement, charsequence)	Sends a series of keystrokes onto the element. 
+
+Parameters:
+
+onElement - element that will receive the keystrokes, usually a text field
+
+charsequence - any string value representing the sequence of keystrokes to be sent
