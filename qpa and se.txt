@@ -2,7 +2,7 @@ QPA
 -----
 Complete the following:
 
-_________ provides the systematic approach to meet customer requirements resulting 
+_________ provides the systematic approach to meet customer requirements resulting       ANS)----(QMS)
 into the desired service or product.
 Single Choice - Select one correct answer from the options list.
 QMS
@@ -12,14 +12,14 @@ DELIVER
 
 State TRUE or FALSE:
 
-Although the overall plan is owned by the project manager, all project stakeholder 
+Although the overall plan is owned by the project manager, all project stakeholder    ANS)----FALSE
 contribute to project planning.
 Single Choice - Select one correct answer from the options list.
 FALSE
 TRUE
 
 Which are not the phases of SDLC ? (Select any two)\
-Multiple Choice - This may have multiple correct answers. Select required answer(s) from the options list.
+Multiple Choice - This may have multiple correct answers. Select required answer(s) from the options list.   ANS)----CUSTOMEER SATISFACTION,CUSTOMIZATION
 Design
 Customer satisfaction
 Customization
@@ -27,13 +27,13 @@ Coding
 
 State TRUE or FALSE: 
 
-Projects can also submit technical and process related Best Practices in KM Portal 
+Projects can also submit technical and process related Best Practices in KM Portal               ANS)----
 which can act as a reference to other similar projects.
 Single Choice - Select one correct answer from the options list.
 FALSE
 TRUE
 
-________ is a technique or methodology which is a take away from a project during its execution.
+________ is a technique or methodology which is a take away from a project during its execution.        ANS)---PROCESS
 Single Choice - Select one correct answer from the options list.
 Process
 Best Practice
@@ -42,7 +42,7 @@ Deliver
 
 Complete the following :
 
-There are two views of Quality. Producer view is ________ and Customer view is ________.
+There are two views of Quality. Producer view is ________ and Customer view is ________.       ANS)---
 Single Choice - Select one correct answer from the options list.
 Fit for use, Meeting requirements
 Meeting requirements, Fit for use
@@ -51,7 +51,7 @@ Quality Control, Quality Assurance
 
 Complete the following:
 
-_________  is the Capgemini recommended tool  for Knowledge management.
+_________  is the Capgemini recommended tool  for Knowledge management.            ANS)---KM
 Single Choice - Select one correct answer from the options list.
 KM
 PDCA
@@ -60,7 +60,7 @@ QTP
 
 Fill in the blanks :
 
-_________ is the activity which helps in defect prevention & reduces the number of defects.
+_________ is the activity which helps in defect prevention & reduces the number of defects.        ANS)---VERIFICATION
 Single Choice - Select one correct answer from the options list.
 Verification
 Validation
@@ -69,7 +69,7 @@ Usability testing
 
 Complete the following:
 
-Best practices of Capgemini projects are stored in _________.
+Best practices of Capgemini projects are stored in _________.                 ANS)----KM PORTAL
 Single Choice - Select one correct answer from the options list.
 QMS
 KM Portal
@@ -78,7 +78,7 @@ UPM
 
 State TRUE or FALSE:
 
-In risk management, the same solution can be applied for all situations.
+In risk management, the same solution can be applied for all situations.           ANS)--FALSE
 Single Choice - Select one correct answer from the options list.
 TRUE
 FALSE
@@ -89,7 +89,7 @@ SE
 
 Complete the following : 
 
-A Software capability needed by the User to solve a problem to achieve an objective 
+A Software capability needed by the User to solve a problem to achieve an objective   ANS)--SOLUTION
 is called _________.
 Single Choice - Select one correct answer from the options list.
 Solution
@@ -99,14 +99,14 @@ Quality Assurance
 
 State whether True or False :
 
-A single baseline may contain many files.
+A single baseline may contain many files.                                      ANS)--
 Single Choice - Select one correct answer from the options list.
 FALSE
 TRUE
 
 Complete the following :
 
-________ includes a detailed plan drawn to transfer all the necessary information from earlier 
+________ includes a detailed plan drawn to transfer all the necessary information from earlier  ANS)--DOCUMENT PLAN
 vendor of the customer including  Documents, lessons learnt, service status etc.,
 Single Choice - Select one correct answer from the options list.
 Requirement transfer
@@ -114,7 +114,7 @@ Document plan
 Knowledge transition
 Knowledge plan
 
-Which of the  following principles that enable Agile methodology to be more effective?
+Which of the  following principles that enable Agile methodology to be more effective?         ANS)--
 (Select any three)
 Multiple Choice - This may have multiple correct answers. Select required answer(s) from the options list.
 Communication
@@ -122,7 +122,7 @@ Simplicity
 Documentation
 Feedback
 
-Which type of SDLC model is chosen when the requirements, the development environment 
+Which type of SDLC model is chosen when the requirements, the development environment     ANS)--
 and the technology are well known and is more or less permanent ?
 Single Choice - Select one correct answer from the options list.
 Waterfall model
@@ -130,7 +130,7 @@ V model
 RAD model
 Prototyping model
 
-White box testing includes:
+White box testing includes:                                                             ANS)---UNIT TESTING, TESTING LOOPS AND INTERNAL LOGIC
 
 (i) Unit Testing  
 (ii) System Testing   
@@ -142,14 +142,14 @@ i,iv
 i,iii
 i,iii,iv
 
-In which phase, activities like knowledge transfer, end user training, project signoff are done ?
+In which phase, activities like knowledge transfer, end user training, project signoff are done ? ANS)--AFTER ACCEPTING TESTING
 Single Choice - Select one correct answer from the options list.
 Before Acceptatnce Testing
 After Acceptance Testing
 During Acceptance Testing
 After Requirement Analysis
 
-Match the following :
+Match the following :                                                       ANS)---OPTION 4
 
 1. Sales and Initial planning
 2. Create Test Strategy
@@ -168,7 +168,7 @@ Single Choice - Select one correct answer from the options list.
 
 Complete the following :
 
-____________ deals with Non functional requirements whereas ________ deals 
+____________ deals with Non functional requirements whereas ________ deals               ANS)--ARCHITECTURE AND DESIGN
 with functional requirements.
 Single Choice - Select one correct answer from the options list.
 Design, Architecture
@@ -177,14 +177,14 @@ SRS, Design
 Client, SRS
 
  
-What does configuration management deal with ?
+What does configuration management deal with ?                                      ANS)---CHANGE CONTROL
 Single Choice - Select one correct answer from the options list.
 Change Control
 Branching, Merging and Labelling
 Establish Baselines
 All of the above
 
-What do X & Y - represent if a document version is represented as X.Y?
+What do X & Y - represent if a document version is represented as X.Y?                    ANS)---
 Single Choice - Select one correct answer from the options list.
 Version number and Revision number
 Document number and Phase number
@@ -193,7 +193,7 @@ Document number and Release number
 
 Complete the following :
 
-A tester will update actual result during _______ and expected result during _________ 
+A tester will update actual result during _______ and expected result during _________              ANS)--TEST EXECUTION AND TEST DESIGN
 in a test case.
 Single Choice - Select one correct answer from the options list.
 Test design, Test execution
@@ -203,7 +203,7 @@ Test design, Defect reporting
 
 Complete the following:
 
-A set of  processes, standards and tools used to develop, alter software in a optimal 
+A set of  processes, standards and tools used to develop, alter software in a optimal                ANS)---
 manner is called as ________.
 Single Choice - Select one correct answer from the options list.
 STLC
@@ -211,7 +211,7 @@ Best software practice
 Systems Development Life Cycle
 Verification
 
-Match the following:
+Match the following:                                           ANS)----OPTION 1
 
 1) Configuration Manager
 2) Non Configurable Item

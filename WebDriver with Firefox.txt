@@ -1,0 +1,99 @@
+package sirriisha;
+import org.openqa.selenium.By;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.support.ui.Select;
+public class FindElementDemo01 {
+	public static void main(String[] args) throws InterruptedException 
+	{
+		System.setProperty("webdriver.firefox.bin",
+				"C:/Users/ibhurasa/AppData/Local/Mozilla Firefox/firefox.exe");
+        FirefoxProfile profile = new FirefoxProfile();
+        profile.setPreference("network.proxy.type", 1);
+        profile.setPreference("network.proxy.http", "10.219.96.26");
+        profile.setPreference("network.proxy.http_port", 8080);
+        profile.setPreference("network.proxy.ssl", "10.219.96.26");
+        profile.setPreference("network.proxy.ssl_port", 8080);
+        
+        FirefoxDriver driver = new FirefoxDriver(profile);
+		//driver.get("file:///D:/indhu/m4/case%20study/Recipe_class_registration.htm");
+        driver.get("file:///D:/indhu/m4/case%20study/Recipe_class_registration.htm");
+		Thread.sleep(1000);
+		
+		
+		try {
+			
+			driver.findElement(By.xpath(".//*[@id='fname']")).sendKeys("Gavara");
+			System.out.println("FirstName : Gavara");
+			Thread.sleep(10);
+			driver.findElement(By.id("lname")).sendKeys("Sirisha");
+			System.out.println("LastName : Sirisha");
+			Thread.sleep(10);
+			driver.findElement(By.name("email")).sendKeys("sirriisha016@gmail.com");
+			System.out.println("EmailID : sirriisha016@gmail.com ");
+			Thread.sleep(10);
+			driver.findElement(By.cssSelector("*[id='mobile']")).sendKeys("9876543211");
+			System.out.println("Mobile Number = 9876543211");
+			Thread.sleep(10);
+			Select Categoryofrecipesinterested = new Select(driver.findElement(By.name("D6")));
+			Categoryofrecipesinterested.selectByIndex(2);
+			Thread.sleep(10);
+			Select CityPreference = new Select(driver.findElement(By.name("D5")));
+			System.out.println("Selected City = Mumbai");
+			CityPreference.selectByIndex(2);
+			Thread.sleep(10);
+			Select ModeofLearning = new Select(driver.findElement(By.name("D4")));
+			ModeofLearning.selectByIndex(2);
+			Thread.sleep(10);
+			Select InterestedCourseduration = new Select(driver.findElement(By.xpath("html/body/form/table/tbody/tr[9]/td[2]/select")));
+			InterestedCourseduration.selectByVisibleText("6 months");
+			System.out.println("Course Duration = 6 months ");
+			Thread.sleep(10);
+			driver.findElement(By.xpath("//*[@id='enqdetails']")).sendKeys("How much does it cost?");
+			System.out.println("Your Enquiry = How much does it cost? ");
+			Thread.sleep(10);
+			boolean source=driver.getPageSource().contains("Online Cooking Class Enquiry Form");
+			if(source == true)
+			{
+				System.out.println("Title matched.");
+			}
+			else
+			{
+				System.out.println("Title not matched.");
+			} 
+			boolean source1=driver.getPageSource().contains("Customer Enquiry Form");
+			if(source1 == true)
+			{
+				System.out.println("Text exist.");
+			}
+			else
+			{
+				System.out.println("Text does not exist.");
+			} 
+			
+			driver.findElement(By.cssSelector("*[id='Submit1']")).click();
+			Thread.sleep(150);
+			driver.switchTo().alert().accept();
+			driver.get("file:///D:/sirriisha/M4/case study/Recipe_class_registration.htm");
+			Thread.sleep(1000);	
+			driver.findElement(By.partialLinkText("Download our Recipe class Brochure")).click();
+
+		//WebElement searchBox=driver.findElement(By.name("search"));
+		
+		//WebElement searchBox=driver.findElement(By.className("form-control input-lg"));
+		//searchBox.sendKeys("Phone");
+		
+		//Thread.sleep(10000);
+		
+		driver.quit();
+//		System.exit(0);
+//		//driver.quit();
+}
+catch(Exception ex){
+	System.out.println("Hello");
+}
+//driver.quit();
+	}
+}
+
+	

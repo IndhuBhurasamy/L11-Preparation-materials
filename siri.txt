@@ -1,0 +1,66 @@
+import org.openqa.selenium.
+WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import org.testng.annotations.
+Test;
+import org.testng.annotations.
+BeforeMethod;
+
+import org.testng.annotations.
+AfterMethod
+;
+
+public class NewTest {
+  
+@Test
+  public void f() 
+{
+	    WebDriver driver = new ChromeDriver();
+	    
+String actualTitle = driver.getTitle();
+		
+
+String expectedTitle = "Your Store";
+		
+if(expectedTitle.equals(actualTitle))
+		
+{
+		
+System.out.println("Match found");
+	
+	}
+		
+else
+		
+{
+		
+System.out.println("Match not found");
+		
+}
+  }
+  
+@BeforeMethod
+  public void beforeMethod() {
+	  
+	
+  System.setProperty("webdriver.chrome.driver","D:/pallavi/M4/chromedriver.exe");
+		
+WebDriver driver = new ChromeDriver();
+		
+driver.get("http://demo.opencart.com/");
+
+  }
+
+ 
+ @AfterMethod
+  public void afterMethod() 
+{
+	 
+ WebDriver driver = new ChromeDriver();
+
+	  driver.close();
+
+  }
+
+}

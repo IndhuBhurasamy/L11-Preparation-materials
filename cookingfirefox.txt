@@ -1,0 +1,137 @@
+package firefox3;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.support.ui.Select;
+
+
+public class Cookingclass {
+	public static void main(String[] args) throws InterruptedException 
+	{
+		System.setProperty("webdriver.firefox.bin",
+				"C:/Users/ibhurasa/AppData/Local/Mozilla Firefox/firefox.exe");
+        FirefoxProfile profile = new FirefoxProfile();
+        profile.setPreference("network.proxy.type", 1);
+        profile.setPreference("network.proxy.http", "10.219.96.26");
+        profile.setPreference("network.proxy.http_port", 8080);
+        profile.setPreference("network.proxy.ssl", "10.219.96.26");
+        profile.setPreference("network.proxy.ssl_port", 8080);
+        
+        FirefoxDriver driver = new FirefoxDriver(profile);
+		//driver.get("file:///D:/Users/ibhurasa/Desktop/Recipe_class_registration.html");
+        driver.get("file:///D:/pallavi/M4/case%20study/Recipe_class_registration.htm");
+        driver.findElement(By.xpath(".//*[@id='fname']")).sendKeys("Pallavi");
+    	Thread.sleep(10);
+    	driver.findElement(By.id("lname")).sendKeys("Krishna");
+    	Thread.sleep(10);
+    	driver.findElement(By.name("email")).sendKeys("pallavi26@gmail.com");
+    	Thread.sleep(10);
+    	driver.findElement(By.cssSelector("*[id='mobile']")).sendKeys("8973629236");
+    	Thread.sleep(10);
+    	Select Categoryofrecipesinterested = new Select(driver.findElement(By.name("D6")));
+    	Categoryofrecipesinterested.selectByIndex(2);
+    	Thread.sleep(10);
+    	WebElement w1=driver.findElement(By.name("D6"));
+    	String textdata=w1.getAttribute("value");
+    	String textdata1="Nonveg";
+    	if(textdata.equals(textdata1))
+    	{
+    		System.out.println("Text verified...Non veg is selected...");
+    	}
+    	else
+    	{
+    		System.out.println("Text not verified...Veg is selected...");
+    	}
+    	Select CityPreference = new Select(driver.findElement(By.name("D5")));
+    	CityPreference.selectByIndex(2);
+    	Thread.sleep(10);
+    	WebElement w2=driver.findElement(By.name("D5"));
+    	String textdata2=w2.getAttribute("value");
+    	String textdata3="mumbai";
+    	if(textdata2.equals(textdata3))
+    	{
+    		System.out.println("Text verified...Mumbai is selected...");
+    	}
+    	else
+    	{
+    		System.out.println("Text not verified...other place is selected...");
+    	}
+    	Select ModeofLearning = new Select(driver.findElement(By.name("D4")));
+    	ModeofLearning.selectByIndex(2);
+    	Thread.sleep(10);
+    	WebElement w3=driver.findElement(By.name("D4"));
+    	String textdata4=w3.getAttribute("value");
+    	String textdata5="mercedes";
+    	if(textdata4.equals(textdata5))
+    	{
+    		System.out.println("Text verified...In house of training is selected...");
+    	}
+    	else
+    	{
+    		System.out.println("Text not verified...other training is selected...");
+    	}
+    	Select InterestedCourseduration = new Select(driver.findElement(By.xpath("html/body/form/table/tbody/tr[9]/td[2]/select")));
+    	InterestedCourseduration.selectByVisibleText("6 months");
+    	Thread.sleep(10);
+    	WebElement w4=driver.findElement(By.xpath("html/body/form/table/tbody/tr[9]/td[2]/select"));
+    	String textdata6=w4.getAttribute("value");
+    	String textdata7="audi";
+    	if(textdata6.equals(textdata7))
+    	{
+    		System.out.println("Text verified...6 months is selected...");
+    	}
+    	else
+    	{
+    		System.out.println("Text not verified...other duration is selected...");
+    	}
+    	driver.findElement(By.xpath("//*[@id='enqdetails']")).sendKeys("How much does it cost?");
+    	Thread.sleep(10);
+    	boolean source=driver.getPageSource().contains("Online Cooking Class Enquiry Form");
+    	if(source == true)
+    	{
+    		System.out.println("Title matched.");
+    	}
+    	else
+    	{
+    		System.out.println("Title not matched.");
+    	} 
+    	boolean source1=driver.getPageSource().contains("Online Cooking School");
+    	if(source1 == true)
+    	{
+    		System.out.println("Online Cooking School Text exist.");
+    	}
+    	else
+    	{
+    		System.out.println("Online Cooking School Text does not exist.");
+    	} 
+    	driver.findElement(By.cssSelector("*[id='Submit1']")).click();
+    	Thread.sleep(15);
+    	driver.switchTo().alert().accept();
+    	boolean source2=driver.getPageSource().contains("Our location representative will contact you soon");
+    	if(source2 == true)
+    	{
+    		System.out.println("Our location representative will contact you soon Text exist.");
+    	}
+    	else
+    	{
+    		System.out.println("Our location representative will contact you soon Text does not exist.");
+    	} 
+    	Thread.sleep(10);
+    	driver.get("file:///D:/pallavi/M4/case%20study/Recipe_class_registration.htm");
+    	Thread.sleep(10);	
+    	driver.findElement(By.partialLinkText("Download our Recipe class Brochure")).click();
+    	boolean source3=driver.getPageSource().contains("Recipe class Brochure is sent to your registered mail id");
+    	if(source3 == true)
+    	{
+    		System.out.println("Recipe class Brochure is sent to your registered mail id Text exist.");
+    	}
+    	else
+    	{
+    		System.out.println("Recipe class Brochure is sent to your registered mail id Text does not exist.");
+    	} 
+    }
+    }
+
+

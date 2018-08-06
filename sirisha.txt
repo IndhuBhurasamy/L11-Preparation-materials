@@ -1,0 +1,56 @@
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Platform;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class chromegrid {
+
+		public static void main(String[] args) throws InterruptedException, MalformedURLException 
+
+		{
+			System.setProperty("webdriver.chromedriver.driver", "D:/chromedriver.exe");
+		
+			   
+			DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+			capabilities.setBrowserName("chrome");
+			capabilities.setCapability("webdriver.chromedriver.driver", "D:/chromedriver.exe");
+			
+
+			
+			capabilities.setPlatform(Platform.WINDOWS);
+			//capabilities.setVersion(version);
+			WebDriver driver = new RemoteWebDriver(new URL("http://localhost:6666/wd/hub"), capabilities);
+	try {
+			driver.get("file:///D:/sree/m4/case%20study/Recipe_class_registration.htm");
+			driver.findElement(By.name("fname")).sendKeys("sree");
+			driver.findElement(By.name("lname")).sendKeys("lekha");
+			driver.findElement(By.xpath("//*[@id='emails']")).sendKeys("sreelekha@gmail.com");
+			driver.findElement(By.id("mobile")).sendKeys("7075301018");
+			System.out.println(driver.getTitle());
+			Select Categoriesofrecipesinterested=new Select(driver.findElement(By.name("D6")));
+			Categoriesofrecipesinterested.selectByIndex(2);
+			Select CityPreference=new Select(driver.findElement(By.name("D5")));
+			CityPreference.selectByValue("mumbai");
+			Select ModeofLearning=new Select(driver.findElement(By.name("D4")));
+			 ModeofLearning.selectByVisibleText("Virtual training");
+			 Select Interestedcourseduration=new Select(driver.findElement(By.name("D4")));
+			 Interestedcourseduration.selectByVisibleText("Virtual training");
+			 driver.findElement(By.id("enqdetails")).sendKeys("nothing");
+			 driver.findElement(By.cssSelector("input[value='Enquire Now!!!']")).click();
+			 driver.switchTo().alert().accept();
+			
+			
+//			driver.quit();
+	}
+	catch(Exception ex){
+		System.out.println("Hello");
+	}
+	//driver.quit();
+		}
+	}

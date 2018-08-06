@@ -1,0 +1,77 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+
+public class Recipe {
+public static void main(String args[]) throws InterruptedException{
+	System.setProperty("webdriver.chrome.driver","D:/Jahanavi.D/M4 Selenium/chromedriver.exe");
+	WebDriver driver = new ChromeDriver();
+	driver.get("D:/Jahanavi.D/M4 Selenium/case study/Recipe_class_registration.htm");
+	driver.findElement(By.xpath(".//*[@id='fname']")).sendKeys("Jahanavi");
+	Thread.sleep(10);
+	driver.findElement(By.id("lname")).sendKeys("Dadi");
+	Thread.sleep(10);
+	driver.findElement(By.name("email")).sendKeys("dadijahanavi1997@gmail.com");
+	Thread.sleep(10);
+	driver.findElement(By.cssSelector("*[id='mobile']")).sendKeys("7032805644");
+	Thread.sleep(10);
+	Select Categoryofrecipesinterested = new Select(driver.findElement(By.name("D6")));
+	Categoryofrecipesinterested.selectByIndex(2);
+	Thread.sleep(10);
+	Select CityPreference = new Select(driver.findElement(By.name("D5")));
+	CityPreference.selectByIndex(2);
+	Thread.sleep(10);
+	Select ModeofLearning = new Select(driver.findElement(By.name("D4")));
+	ModeofLearning.selectByIndex(2);
+	Thread.sleep(10);
+	Select InterestedCourseduration = new Select(driver.findElement(By.xpath("html/body/form/table/tbody/tr[9]/td[2]/select")));
+	InterestedCourseduration.selectByVisibleText("6 months");
+	Thread.sleep(10);
+	driver.findElement(By.xpath("//*[@id='enqdetails']")).sendKeys("How much does it cost?");
+	Thread.sleep(10);
+	boolean source=driver.getPageSource().contains("Online Cooking Class Enquiry Form");
+	if(source == true)
+	{
+		System.out.println("Title matched.");
+	}
+	else
+	{
+		System.out.println("Title not matched.");
+	} 
+	boolean source1=driver.getPageSource().contains("Online Cooking School");
+	if(source1 == true)
+	{
+		System.out.println("Text exist.");
+	}
+	else
+	{
+		System.out.println("Text does not exist.");
+	} 
+	driver.findElement(By.cssSelector("*[id='Submit1']")).click();
+	Thread.sleep(150);
+	driver.switchTo().alert().accept();
+	driver.get("D:/Jahanavi.D/M4 Selenium/case study/Recipe_class_registration.htm");
+	Thread.sleep(1000);	
+	driver.findElement(By.partialLinkText("Download our Recipe class Brochure")).click();
+	boolean source2=driver.getPageSource().contains("Our location representative will contact you soon");
+	if(source2 == true)
+	{
+		System.out.println("Text exist.");
+	}
+	else
+	{
+		System.out.println("Text does not exist.");
+	} 
+	boolean source3=driver.getPageSource().contains("Recipe class Brochure is sent to your registered mail id");
+	if(source3 == true)
+	{
+		System.out.println("Text exist.");
+	}
+	else
+	{
+		System.out.println("Text does not exist.");
+	} 
+}
+}

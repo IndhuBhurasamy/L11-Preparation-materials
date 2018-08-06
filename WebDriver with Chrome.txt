@@ -1,0 +1,75 @@
+package webdriver;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class Reciepe {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver","D:/sirriisha/M4/chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("file:///D:/sirriisha/M4/case study/Recipe_class_registration.htm");
+		driver.findElement(By.xpath(".//*[@id='fname']")).sendKeys("Gavara");
+		System.out.println("FirstName is Entered");
+		Thread.sleep(10);
+		driver.findElement(By.id("lname")).sendKeys("Sirisha");
+		System.out.println("LastName is Entered");
+		Thread.sleep(10);
+		driver.findElement(By.name("email")).sendKeys("sirriisha016@gmail.com");
+		System.out.println("Email Entered");
+		Thread.sleep(10);
+		driver.findElement(By.cssSelector("*[id='mobile']")).sendKeys("9876543211");
+		System.out.println("Mobile Number is Entered");
+		Thread.sleep(10);
+		Select Categoryofrecipesinterested = new Select(driver.findElement(By.name("D6")));
+		Categoryofrecipesinterested.selectByIndex(2);
+		System.out.println("Non-Veg is selected");
+		Thread.sleep(10);
+		Select CityPreference = new Select(driver.findElement(By.name("D5")));
+		CityPreference.selectByIndex(2);
+		System.out.println("Mumbai is selected");
+		Thread.sleep(10);
+		Select ModeofLearning = new Select(driver.findElement(By.name("D4")));
+		ModeofLearning.selectByIndex(2);
+		System.out.println("Virtual training is selected");
+		Thread.sleep(10);
+		Select InterestedCourseduration = new Select(driver.findElement(By.xpath("html/body/form/table/tbody/tr[9]/td[2]/select")));
+		InterestedCourseduration.selectByVisibleText("6 months");
+		System.out.println("Interested Course duration 6months is selected");
+		Thread.sleep(10);
+		driver.findElement(By.xpath("//*[@id='enqdetails']")).sendKeys("How much does it cost?");
+		System.out.println("Enquiry Details is filled");
+		Thread.sleep(10);
+		boolean source=driver.getPageSource().contains("Online Cooking Class Enquiry Form");
+		if(source == true)
+		{
+			System.out.println("Title matched.");
+		}
+		else
+		{
+			System.out.println("Title not matched.");
+		} 
+		boolean source1=driver.getPageSource().contains("Customer Enquiry Form");
+		if(source1 == true)
+		{
+			System.out.println("Text exist.");
+		}
+		else
+		{
+			System.out.println("Text does not exist.");
+		} 
+		
+		driver.findElement(By.cssSelector("*[id='Submit1']")).click();
+		Thread.sleep(150);
+		driver.switchTo().alert().accept();
+		driver.get("file:///D:/sirriisha/M4/case study/Recipe_class_registration.htm");
+		Thread.sleep(1000);	
+		driver.findElement(By.partialLinkText("Download our Recipe class Brochure")).click();
+		
+	
+	}
+
+}
